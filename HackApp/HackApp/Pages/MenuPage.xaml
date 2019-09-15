@@ -6,7 +6,7 @@
              xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              mc:Ignorable="d"
              x:Class="HackApp.Pages.MenuPage" 
-             Title="                   Menü">
+             Title="                       Menü">
     <Grid BackgroundColor="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

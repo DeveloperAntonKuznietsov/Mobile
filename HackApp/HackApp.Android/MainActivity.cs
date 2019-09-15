@@ -7,13 +7,15 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Lottie.Forms.Droid;
+using Plugin.Media;
+using Plugin.CurrentActivity;
 
 namespace HackApp.Droid
 {
     [Activity(Label = "HackApp", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override  void OnCreate(Bundle savedInstanceState)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
@@ -23,6 +25,7 @@ namespace HackApp.Droid
             Xamarin.FormsMaps.Init(this, savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            CrossCurrentActivity.Current.Init(this, savedInstanceState);
             AnimationViewRenderer.Init();
             LoadApplication(new App());
         }

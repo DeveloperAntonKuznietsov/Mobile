@@ -27,7 +27,7 @@
                 BorderWidth="2" 
                 CornerRadius="15" 
                 BorderColor="#20B2AA"
-                Margin="0,0,0,5" >
+                Margin="5,0,0,5" >
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup x:Name="CommonStates">
                     <VisualState x:Name="Normal">
@@ -93,7 +93,7 @@
                 CornerRadius="15" 
                 BorderColor="#20B2AA"
                 Clicked="BtnMenu_Clicked"
-                Margin="0,0,0,5" >
+                Margin="0,0,5,5" >
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup x:Name="CommonStates">
                     <VisualState x:Name="Normal">

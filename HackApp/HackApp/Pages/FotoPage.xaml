@@ -7,9 +7,14 @@
              x:Class="HackApp.Pages.FotoPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+            <Button x:Name="TakePicture"
+                   Clicked="TakePicture_Clicked"
+                   Text="Make foto"/>
+            <Button x:Name="UploadFoto"
+                    Clicked="UploadFoto_Clicked"
+                    Text="pick foto"/>
+            <Image x:Name="Image1" HeightRequest="240"/>
+    
+       </StackLayout>
     </ContentPage.Content>
 </ContentPage>

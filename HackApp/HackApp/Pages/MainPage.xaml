@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:map="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             mc:Ignorable="d"
+             x:Class="HackApp.MainPage"
+             NavigationPage.HasNavigationBar="false">
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="55"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <map:Map x:Name="MyMap" MapType="Street" HasZoomEnabled="True" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="3"/>
+        <Button Text="Benachrichtung" 
+                Grid.Row="1" 
+                Grid.Column="0" 
+                TextColor="#C26A00" 
+                BackgroundColor="White" 
+                BorderWidth="2" 
+                CornerRadius="15" 
+                BorderColor="#20B2AA"/>
+        <Button Text="+" 
+                Grid.Row="1" 
+                Grid.Column="1"
+                HeightRequest="60"
+                WidthRequest="60"
+                FontSize="50" Padding="15"
+                TextColor="#C26A00" 
+                BackgroundColor="White" 
+                BorderWidth="2" 
+                CornerRadius="90" 
+                BorderColor="#20B2AA"/>
+        <Button Text="Menü" 
+                Grid.Row="1"
+                Grid.Column="2"
+                TextColor="#C26A00" 
+                BackgroundColor="White" 
+                BorderWidth="2" 
+                CornerRadius="15" 
+                BorderColor="#20B2AA"/>
+
+    </Grid>
+
+</ContentPage>

@@ -11,7 +11,7 @@
     <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="55"/>
+            <RowDefinition Height="65"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -26,26 +26,93 @@
                 BackgroundColor="White" 
                 BorderWidth="2" 
                 CornerRadius="15" 
-                BorderColor="#20B2AA"/>
-        <Button Text="+" 
+                BorderColor="#20B2AA"
+                Margin="0,0,0,5" >
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Scale"
+                            Value="1" />
+                        </VisualState.Setters>
+                    </VisualState>
+
+                    <VisualState x:Name="Pressed">
+                        <VisualState.Setters>
+                            <Setter Property="Scale"
+                            Value="0.8" />
+                        </VisualState.Setters>
+                    </VisualState>
+
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Button>
+        <Button x:Name="AddNewIncident"
+                Text="+" 
+                FontSize="35"
+                Padding="5"
+                
+                FontAttributes="Bold"
                 Grid.Row="1" 
                 Grid.Column="1"
                 HeightRequest="60"
                 WidthRequest="60"
-                FontSize="50" Padding="15"
                 TextColor="#C26A00" 
                 BackgroundColor="White" 
                 BorderWidth="2" 
                 CornerRadius="90" 
-                BorderColor="#20B2AA"/>
-        <Button Text="Menü" 
+                BorderColor="#20B2AA"
+                Margin="0,0,0,5"
+                Clicked="AddNewIncident_Clicked">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Scale"
+                            Value="1" />
+                        </VisualState.Setters>
+                    </VisualState>
+
+                    <VisualState x:Name="Pressed">
+                        <VisualState.Setters>
+                            <Setter Property="Scale"
+                            Value="0.8" />
+                        </VisualState.Setters>
+                    </VisualState>
+
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Button>
+        <Button Text="Menü"
+                x:Name="btnMenu"
                 Grid.Row="1"
                 Grid.Column="2"
                 TextColor="#C26A00" 
                 BackgroundColor="White" 
                 BorderWidth="2" 
                 CornerRadius="15" 
-                BorderColor="#20B2AA"/>
+                BorderColor="#20B2AA"
+                Clicked="BtnMenu_Clicked"
+                Margin="0,0,0,5" >
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Scale"
+                            Value="1" />
+                        </VisualState.Setters>
+                    </VisualState>
+
+                    <VisualState x:Name="Pressed">
+                        <VisualState.Setters>
+                            <Setter Property="Scale"
+                            Value="0.8" />
+                        </VisualState.Setters>
+                    </VisualState>
+
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Button>
 
     </Grid>
 

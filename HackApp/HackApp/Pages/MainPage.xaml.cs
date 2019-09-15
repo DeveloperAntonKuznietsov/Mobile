@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using HackApp.Pages;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -76,6 +77,16 @@ namespace HackApp
                 Debug.WriteLine(ex);
             }
 
+
+        }
+
+        private void BtnMenu_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MenuPage());
+        }
+
+        private void AddNewIncident_Clicked(object sender, EventArgs e)
+        {
 
         }
     }

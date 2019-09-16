@@ -4,17 +4,94 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="HackApp.Pages.FotoPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Button x:Name="TakePicture"
-                   Clicked="TakePicture_Clicked"
-                   Text="Make foto"/>
-            <Button x:Name="UploadFoto"
-                    Clicked="UploadFoto_Clicked"
-                    Text="pick foto"/>
-            <Image x:Name="Image1" HeightRequest="240"/>
-    
-       </StackLayout>
-    </ContentPage.Content>
+             x:Class="HackApp.Pages.FotoPage"
+             Title="                EPS Befall melden">
+    <Grid BackgroundColor="White" Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+       
+        <Grid Grid.Row="0" Margin="10,5,10,0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition  />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Optional: " FontSize="25"/>
+                        <Span Text="Bild des Befalls" FontAttributes="Bold" FontSize="25"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Text="Lade ein Bild hoch um die bearbeitung des Befalls einfacher zu gestalten." FontSize="20"  Grid.Row="1"/>
+            <Button Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" x:Name="TakePicture"
+                    Text="+" 
+                    FontSize="35" 
+                    FontAttributes="Bold"
+                    HeightRequest="60"
+                    WidthRequest="60"
+                    TextColor="#C26A00" 
+                    BackgroundColor="White" 
+                    BorderWidth="2" 
+                    CornerRadius="90" 
+                    BorderColor="#20B2AA"
+                    Clicked="TakePicture_Clicked" 
+                    IsVisible="True"/>
+
+            <Image x:Name="Image1" HeightRequest="240"  Grid.Column="1" Grid.RowSpan="2" Grid.Row="0" IsVisible="False"/>
+        </Grid>
+        <StackLayout Grid.Row="1" Margin="10,0,10,0">
+            
+            <Label Text="Vorkommen" FontAttributes="Bold" FontSize="25"/>
+            <Label Text="Wähle die Einrichtung, die sich in der Nähe des Befalls befindet." FontSize="20"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Text="Private" Grid.Row="0" Grid.Column="0" TextColor="#C26A00" 
+                   BackgroundColor="White" 
+                   BorderWidth="2" 
+                   CornerRadius="15" 
+                   BorderColor="#20B2AA"/>
+                <Button Text="Park" Grid.Row="0" Grid.Column="1" BackgroundColor="White"  TextColor="#C26A00"
+                   BorderWidth="2" 
+                   CornerRadius="15" 
+                   BorderColor="#20B2AA"/>
+                <Button Text="Wald" Grid.Row="0" Grid.Column="2" BackgroundColor="White"  TextColor="#C26A00"
+                   BorderWidth="2" 
+                   CornerRadius="15" 
+                   BorderColor="#20B2AA"/>
+                <Button Text="Schulen und Kindergärten" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" TextColor="#C26A00"
+                   BorderWidth="2" 
+                   CornerRadius="15" 
+                   BorderColor="#20B2AA"/>
+                <Button Text="Bahnhof" Grid.Row="1" Grid.Column="2" BackgroundColor="White" TextColor="#C26A00"
+                   BorderWidth="2" 
+                   CornerRadius="15" 
+                   BorderColor="#20B2AA"/>
+            </Grid>
+        </StackLayout>
+        <StackLayout Grid.Row="2" Margin="10,0,10,0">
+            <Label Text="Standort" FontSize="25" FontAttributes="Bold"/>
+            <Label Text="Falls Sie kein GPS nutzen, geben Sie bitte die ungefähre Adresse an." FontSize="20"/>
+            <Button Text="Befall melden" FontSize="30" BackgroundColor="White" 
+                   BorderWidth="2"  TextColor="#C26A00"
+                   CornerRadius="15" 
+                   BorderColor="#20B2AA"/>
+
+        </StackLayout>
+    </Grid>
 </ContentPage>

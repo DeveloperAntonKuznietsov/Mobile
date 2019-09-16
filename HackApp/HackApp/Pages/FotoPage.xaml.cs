@@ -44,6 +44,8 @@ namespace HackApp.Pages
                 var stream = file.GetStream();
                 return stream;
             });
+            TakePicture.IsVisible = false;
+            Image1.IsVisible = true;
         }
 
         private void UploadFoto_Clicked(object sender, EventArgs e)

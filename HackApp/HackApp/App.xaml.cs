@@ -12,7 +12,7 @@ namespace HackApp
 
             MainPage = new NavigationPage(new MainPage())
             {
-                BarTextColor = Color.FromHex("#AFEEEE")
+                BarBackgroundColor = Color.FromHex("#20B2AA")
             };
         }
 

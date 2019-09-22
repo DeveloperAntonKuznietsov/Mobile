@@ -61,36 +61,42 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button Text="Private" Grid.Row="0" Grid.Column="0" TextColor="#C26A00" 
+                <Button x:Name="btnPrivate" Text="Private" Grid.Row="0" Grid.Column="0" TextColor="#C26A00" 
                    BackgroundColor="White" 
                    BorderWidth="2" 
                    CornerRadius="15" 
-                   BorderColor="#20B2AA"/>
-                <Button Text="Park" Grid.Row="0" Grid.Column="1" BackgroundColor="White"  TextColor="#C26A00"
+                   BorderColor="#20B2AA"
+                        Clicked="BtnPrivate_Clicked"/>
+                <Button x:Name="btnPark" Text="Park" Grid.Row="0" Grid.Column="1" BackgroundColor="White"  TextColor="#C26A00"
                    BorderWidth="2" 
                    CornerRadius="15" 
-                   BorderColor="#20B2AA"/>
-                <Button Text="Wald" Grid.Row="0" Grid.Column="2" BackgroundColor="White"  TextColor="#C26A00"
+                   BorderColor="#20B2AA"
+                        Clicked="BtnPark_Clicked"/>
+                <Button x:Name="btnWald" Text="Wald" Grid.Row="0" Grid.Column="2" BackgroundColor="White"  TextColor="#C26A00"
                    BorderWidth="2" 
                    CornerRadius="15" 
-                   BorderColor="#20B2AA"/>
-                <Button Text="Schulen und Kindergärten" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" TextColor="#C26A00"
+                   BorderColor="#20B2AA"
+                        Clicked="BtnWald_Clicked"/>
+                <Button x:Name="btnSchule" Text="Schulen und Kindergärten" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" TextColor="#C26A00"
                    BorderWidth="2" 
                    CornerRadius="15" 
-                   BorderColor="#20B2AA"/>
-                <Button Text="Bahnhof" Grid.Row="1" Grid.Column="2" BackgroundColor="White" TextColor="#C26A00"
+                   BorderColor="#20B2AA"
+                        Clicked="BtnSchule_Clicked"/>
+                <Button x:Name="btnBahnhof" Text="Bahnhof" Grid.Row="1" Grid.Column="2" BackgroundColor="White" TextColor="#C26A00"
                    BorderWidth="2" 
                    CornerRadius="15" 
-                   BorderColor="#20B2AA"/>
+                   BorderColor="#20B2AA"
+                        Clicked="BtnBahnhof_Clicked"/>
             </Grid>
         </StackLayout>
         <StackLayout Grid.Row="2" Margin="10,0,10,0">
             <Label Text="Standort" FontSize="25" FontAttributes="Bold"/>
             <Label Text="Falls Sie kein GPS nutzen, geben Sie bitte die ungefähre Adresse an." FontSize="20"/>
-            <Button Text="Befall melden" FontSize="30" BackgroundColor="White" 
+            <Button x:Name="btnMelden" Text="Befall melden" FontSize="30" BackgroundColor="White" 
                    BorderWidth="2"  TextColor="#C26A00"
                    CornerRadius="15" 
-                   BorderColor="#20B2AA"/>
+                   BorderColor="#20B2AA"
+                    Clicked="BtnMelden_Clicked"/>
 
         </StackLayout>
     </Grid>

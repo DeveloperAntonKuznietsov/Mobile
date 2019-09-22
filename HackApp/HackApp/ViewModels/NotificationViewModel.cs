@@ -16,19 +16,27 @@ namespace HackApp.ViewModels
             {
                 new Notification
                 {
-                    Title= "Bafall 1",
+                    Title= "Kindergarten \"Regenbogen\"",
+                    Preview="Aufgrund zu hoher Belastung von Eichenprozessionsspinner, bleibt der Kindergarten in der bis zum 2.10.19 geschlossen.",
+                    Date="22.09.19",
                     IsVisible =false
 
                 },
                 new Notification
                 {
-                    Title= "Bafall 2"
+                    Title= "Münster Hauptbahnhof",
+                    Preview="Der Münster Hauptbahnhof ist wieder EPS frei.",
+                    Date="26.09.19",
+                    IsVisible =false
                 },
                 new Notification
                 {
-                    Title= "Bafall 3"
+                    Title= "Aral(Wolbecker Str. 140A)",
+                    Preview="Das Auftanken funktioniert wieder wie gewohnt.",
+                    Date="16.09.19",
+                    IsVisible =false
                 },
-
+                
             };
         }
 
@@ -60,6 +68,10 @@ namespace HackApp.ViewModels
             var index = Notifications.IndexOf(notification);
             Notifications.Remove(notification);
             Notifications.Insert(index,notification);
+        }
+        public void AddNewNotification(Notification notification)
+        {
+            Notifications.Add(notification);
         }
     }
 }

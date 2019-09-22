@@ -15,7 +15,7 @@
         <lottie:AnimationView x:Name="animationView" 
                               Grid.Row="0"
 	                          Animation="city2.json" 
-	                          Loop="false" 
+	                          Loop="True" 
 	                          AutoPlay="True"
 	                          HeightRequest="500"
                               WidthRequest="500"/>

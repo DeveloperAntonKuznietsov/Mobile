@@ -36,9 +36,6 @@ namespace HackApp.Pages
 
             if (file == null)
                 return;
-
-            await DisplayAlert("File Location", file.Path, "OK");
-
             Image1.Source = ImageSource.FromStream(() =>
             {
                 var stream = file.GetStream();
@@ -50,7 +47,88 @@ namespace HackApp.Pages
 
         private void UploadFoto_Clicked(object sender, EventArgs e)
         {
+            
+            
+        }
 
+        private void BtnPrivate_Clicked(object sender, EventArgs e)
+        {
+            //TextColor = "#C26A00"
+            //       BackgroundColor = "White"
+            //       BorderColor = "#20B2AA"
+            btnPrivate.TextColor = Color.White;
+            btnPrivate.BackgroundColor = Color.FromHex("#20B2AA");
+            btnWald.TextColor= Color.FromHex("#C26A00");
+            btnWald.BackgroundColor = Color.White;
+            btnSchule.TextColor = Color.FromHex("#C26A00");
+            btnSchule.BackgroundColor = Color.White;
+            btnBahnhof.TextColor = Color.FromHex("#C26A00");
+            btnBahnhof.BackgroundColor = Color.White;
+            btnPark.TextColor = Color.FromHex("#C26A00");
+            btnPark.BackgroundColor = Color.White;
+        }
+
+        private void BtnWald_Clicked(object sender, EventArgs e)
+        {
+            btnWald.TextColor = Color.White;
+            btnWald.BackgroundColor = Color.FromHex("#20B2AA");
+            btnPrivate.TextColor = Color.FromHex("#C26A00");
+            btnPrivate.BackgroundColor = Color.White;
+            btnSchule.TextColor = Color.FromHex("#C26A00");
+            btnSchule.BackgroundColor = Color.White;
+            btnBahnhof.TextColor = Color.FromHex("#C26A00");
+            btnBahnhof.BackgroundColor = Color.White;
+            btnPark.TextColor = Color.FromHex("#C26A00");
+            btnPark.BackgroundColor = Color.White;
+        }
+
+        private void BtnSchule_Clicked(object sender, EventArgs e)
+        {
+            btnSchule.TextColor = Color.White;
+            btnSchule.BackgroundColor = Color.FromHex("#20B2AA");
+            btnWald.TextColor = Color.FromHex("#C26A00");
+            btnWald.BackgroundColor = Color.White;
+            btnPrivate.TextColor = Color.FromHex("#C26A00");
+            btnPrivate.BackgroundColor = Color.White;
+            btnBahnhof.TextColor = Color.FromHex("#C26A00");
+            btnBahnhof.BackgroundColor = Color.White;
+            btnPark.TextColor = Color.FromHex("#C26A00");
+            btnPark.BackgroundColor = Color.White;
+        }
+
+        private void BtnBahnhof_Clicked(object sender, EventArgs e)
+        {
+            btnBahnhof.TextColor = Color.White;
+            btnBahnhof.BackgroundColor = Color.FromHex("#20B2AA");
+            btnWald.TextColor = Color.FromHex("#C26A00");
+            btnWald.BackgroundColor = Color.White;
+            btnSchule.TextColor = Color.FromHex("#C26A00");
+            btnSchule.BackgroundColor = Color.White;
+            btnPrivate.TextColor = Color.FromHex("#C26A00");
+            btnPrivate.BackgroundColor = Color.White;
+            btnPark.TextColor = Color.FromHex("#C26A00");
+            btnPark.BackgroundColor = Color.White;
+        }
+
+        private void BtnPark_Clicked(object sender, EventArgs e)
+        {
+            btnPark.TextColor = Color.White;
+            btnPark.BackgroundColor = Color.FromHex("#20B2AA");
+            btnWald.TextColor = Color.FromHex("#C26A00");
+            btnWald.BackgroundColor = Color.White;
+            btnSchule.TextColor = Color.FromHex("#C26A00");
+            btnSchule.BackgroundColor = Color.White;
+            btnBahnhof.TextColor = Color.FromHex("#C26A00");
+            btnBahnhof.BackgroundColor = Color.White;
+            btnPrivate.TextColor = Color.FromHex("#C26A00");
+            btnPrivate.BackgroundColor = Color.White;
+        }
+
+        private void BtnMelden_Clicked(object sender, EventArgs e)
+        {
+            TakePicture.IsVisible = true;
+            Image1.IsVisible = false;
+            DisplayAlert("Nachricht ", "Ihre Nachricht wurde versendet und wird bearbeitet.", "OK");
         }
     }
 }

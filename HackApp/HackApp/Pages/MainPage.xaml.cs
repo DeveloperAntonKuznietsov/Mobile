@@ -33,13 +33,34 @@ namespace HackApp
         {
             try
             {
-                var pin = new Pin()
+                var pinCineplex = new Pin()
                 {
-                    Position = new Position(51.9502139, 7.4840153),
-                    Label = "Some Pin!",
-                    Address="Home",
+                    Position = new Position(51.9519062, 7.6321126),
+                    Label = "CINEPLEX Münster",
+                    Address= "30.09 ist der Bürgersteig bis 12.00 Uhr geschlossen.",
                 };
-                MyMap.Pins.Add(pin);
+                var pinKindergarten = new Pin()
+                {
+                    Position = new Position(51.97004, 7.6333313),
+                    Label = "Kindergarten \"Regenbogen\"",
+                    Address = "Belastung von Eichenprozessionsspinner.",
+                };
+                var pinBahnhof = new Pin()
+                {
+                    Position = new Position(51.9625937, 7.5202854),
+                    Label = "Münster Hauptbahnhof",
+                    Address = "Der Hauptbahnhof ist wieder EPS frei.",
+                };
+                var pinAral = new Pin()
+                {
+                    Position = new Position(51.9540987, 7.6399258),
+                    Label = "Aral",
+                    Address = "Funktioniert wieder .",
+                };
+                MyMap.Pins.Add(pinCineplex);
+                MyMap.Pins.Add(pinKindergarten);
+                MyMap.Pins.Add(pinBahnhof);
+                MyMap.Pins.Add(pinAral);
                 MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(51.9502139, 7.4840153), Distance.FromKilometers(100)));
                 
             }
@@ -59,6 +80,11 @@ namespace HackApp
         private void AddNewIncident_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new FotoPage());
+        }
+
+        private void BtnNotification_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new NotificationPage());
         }
     }
 }

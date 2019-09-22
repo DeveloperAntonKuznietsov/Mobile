@@ -27,7 +27,9 @@
                 BorderWidth="2" 
                 CornerRadius="15" 
                 BorderColor="#20B2AA"
-                Margin="5,0,0,5" >
+                Margin="5,0,0,5" 
+                x:Name="btnNotification"
+                Clicked="BtnNotification_Clicked">
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup x:Name="CommonStates">
                     <VisualState x:Name="Normal">

@@ -90,6 +90,8 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\city2.json" />
+    <AndroidAsset Include="Assets\dino-dance.json" />
+    <AndroidAsset Include="Assets\newLabel.json" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

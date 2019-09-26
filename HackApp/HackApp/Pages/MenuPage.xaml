@@ -6,7 +6,7 @@
              xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              mc:Ignorable="d"
              x:Class="HackApp.Pages.MenuPage" 
-             Title="                            Menü">
+             Title="                 Menü">
     <Grid BackgroundColor="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -17,8 +17,8 @@
 	                          Animation="city2.json" 
 	                          Loop="True" 
 	                          AutoPlay="True"
-	                          HeightRequest="500"
-                              WidthRequest="500"/>
+	                          HeightRequest="400"
+                              WidthRequest="400"/>
         <StackLayout Grid.Row="1" Margin="0,0,0,25">
             <Button Text="Wie funktioniert die APP?" BackgroundColor="White" BorderColor="White"/>
             <Button Text="Bewerten" BackgroundColor="White" BorderColor="White"/>

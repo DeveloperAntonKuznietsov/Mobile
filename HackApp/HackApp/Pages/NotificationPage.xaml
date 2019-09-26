@@ -7,7 +7,7 @@
              xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              mc:Ignorable="d"
              x:Class="HackApp.Pages.NotificationPage"
-             Title="                Benachrichtigung">
+             Title="        Benachrichtigung">
     <ContentPage.BindingContext>
         <local:NotificationViewModel/>
     </ContentPage.BindingContext>
@@ -65,7 +65,7 @@
         <StackLayout Grid.Row="1" Grid.ColumnSpan="2" Margin="20,0,20,5" x:Name="listOfUpdates" IsVisible="False">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="60"/>
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
@@ -78,7 +78,7 @@
 	                          Loop="True" 
 	                          AutoPlay="True"
 	                          HeightRequest="40"
-                              WidthRequest="80"/>
+                              WidthRequest="60"/>
                 <Label Text="CINEPLEX Münster" TextColor="Black" FontSize="Large" Grid.Column="1" Grid.Row="0"/>
                 <Label Text="30.09 ist der Bürgersteig bis 12.00 Uhr geschlossen." TextColor="Black"  Grid.Column="1" Grid.Row="1"/>
             </Grid>

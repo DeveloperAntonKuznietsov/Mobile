@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="HackApp.Pages.FotoPage"
-             Title="                EPS Befall melden">
+             Title="        EPS Befall melden">
     <Grid BackgroundColor="White" Margin="5">
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -77,7 +77,7 @@
                    CornerRadius="15" 
                    BorderColor="#20B2AA"
                         Clicked="BtnWald_Clicked"/>
-                <Button x:Name="btnSchule" Text="Schulen und Kindergärten" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" TextColor="#C26A00"
+                <Button x:Name="btnSchule" Text="Kita/Schulen" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" TextColor="#C26A00"
                    BorderWidth="2" 
                    CornerRadius="15" 
                    BorderColor="#20B2AA"
